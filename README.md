@@ -8,7 +8,7 @@ A simple Golang password hasher
 - Logging middleware is illustrative, but would otherwise adhere to logging standards that already exist
 - There was no indication of a return from `/shutdown` endpoint, so I added some basic information
 - To adhere to the outline, I returned only the stats requested, though, in production I might add additional stats: pending/processing count (instead of just total, for instance), size of datastore, etc
-- HTTP rest testing using only the standard library was becoming a significant time sink, However, unit tests have been included to illustrate a commitment to testing
+- HTTP rest testing using only the standard library was becoming a significant time sink, However, unit tests have been included to illustrate a commitment to testing. In a production environment I would likely use something like gorilla to help with testing.
 
 # Installation
 ```
