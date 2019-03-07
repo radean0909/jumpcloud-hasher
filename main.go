@@ -34,7 +34,9 @@ func main() {
 
 	router.ParseRoutes()
 
-	if err := http.ListenAndServe(":8000", mux); err != nil {
+	if err := http.ListenAndServe(":8080", mux); err != nil {
 		log.Fatal(err)
+	} else {
+		log.Printf("Started HTTP Server on Port 8080\n")
 	}
 }
