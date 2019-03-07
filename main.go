@@ -34,9 +34,9 @@ func main() {
 
 	router.ParseRoutes()
 
+	log.Printf("Starting HTTP Server on Port %d...\n", 8080) // This could be an environment variable
+
 	if err := http.ListenAndServe(":8080", mux); err != nil {
 		log.Fatal(err)
-	} else {
-		log.Printf("Started HTTP Server on Port 8080\n")
 	}
 }
